@@ -10,13 +10,13 @@ interface Task {
   dependencies: number[] | null;
 }
 
-interface ExecutionGroup {
+export interface ExecutionGroup {
   level: number;
   tasks: Task[];
   canRunInParallel: boolean;
 }
 
-interface ExecutionPlan {
+export interface ExecutionPlan {
   totalLevels: number;
   groups: ExecutionGroup[];
   parallelGroups: number;

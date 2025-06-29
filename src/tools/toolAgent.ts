@@ -6,12 +6,12 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-export const toolAgent = tool({
+export const toolAgentTool = tool({
   name: "Tool Agent",
   description: "Use this tool to execute a task",
   parameters: z.object({ query: z.string() }),
   async execute({query}) {
-    const result = await toolAgentRun(query);
+    const result = await toolAgent(query);
     return result;
   }
 })
@@ -26,7 +26,7 @@ const toolAgentBase = new Agent({
 
 const toolAgentRunner = new Runner()
 
-async function toolAgentRun(input: string) {
+export async function toolAgent(input: string) {
   const result = await toolAgentRunner.run(toolAgentBase, input);
   
   // Parse the result to extract plan text
