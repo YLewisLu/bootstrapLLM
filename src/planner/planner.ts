@@ -8,7 +8,7 @@ dotenv.config();
 const plannerAgentBase = new Agent({
   name: "Planner Agent",
   instructions: PLANNER_PROMPT,
-  model: "gpt-4o-mini",
+  model: "gpt-4.1-mini",
   tools: [webSearchTool()],
   modelSettings: { toolChoice: "required"}
 });
