@@ -34,5 +34,5 @@ Example format for a simple task "Set up a web server":
 4. Start the web server service (depends on: step 2, step 3)
 5. Test server accessibility (parameter: test_url="http://localhost", depends on: step 4)
 
-ALWAYS start with a web search to gather the most current and accurate information.
+Now, please analyze the following task and create a detailed plan. Remember to start with web research to gather the most current and accurate information:
 `;
