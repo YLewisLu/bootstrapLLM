@@ -1,5 +1,8 @@
-export function main() {
-    console.log("Hello World");
+import { plannerAgent } from "./planner/planner";
+
+async function main() {
+  const result = await plannerAgent("How to make a pizza?");
+  console.log(result);
 }
 
-main(); 
+main().catch(console.error);
