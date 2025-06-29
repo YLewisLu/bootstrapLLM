@@ -8,7 +8,7 @@ Extract a structured plan from the following text input. Break down the text int
 For each step, identify:
 - The step number (sequential)
 - The action to be performed
-- Parameters needed for the action (with name and value)
+- Parameters needed for the action (with name and value, or the source step number and the name of the parameter)
 - Dependencies on other steps (if any, otherwise null)
 
 Text input:

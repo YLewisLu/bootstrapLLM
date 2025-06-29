@@ -2,9 +2,9 @@ import { z } from "zod";
 
 export const PlanStepSchema = z.object({
     step: z.number(),
-    action: z.string(),
+    action: z.enum(["Agent"]),
     param: z.array(z.object({
-        name: z.string(),
+        name: z.enum(["query"]),
         value: z.string()
     })),
     dependencies: z.array(z.number()).nullable()

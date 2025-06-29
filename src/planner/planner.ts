@@ -17,6 +17,11 @@ const plannerAgentRunner = new Runner()
 
 export async function plannerAgent(input: string) {
   const result = await plannerAgentRunner.run(plannerAgentBase, input);
-  return result;
+  
+  // Parse the result to extract plan text
+  const currentStep = result.state._currentStep;
+  const planText = currentStep?.type === "next_step_final_output" ? currentStep.output : "";
+  
+  return planText;
 }
 
